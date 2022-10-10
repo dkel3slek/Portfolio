@@ -1,3 +1,5 @@
+## Portfolio
+본 프로젝트는 포트폴리오 목적으로 제작하였습니다.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
