@@ -107,6 +107,31 @@ nav span:hover{
   color: white;
 }
 
+/* home */
+/* .svg-box{
+  display: flex;
+  width:100%;
+  height: 100%;
+  align-items: center;
+  padding: 0px 150px
+} */
+svg {
+  fill: none;
+  width: 500px;
+  stroke-width: 12px;
+}
+
+path{
+  stroke: black;
+  stroke-dasharray: var(--length);
+  stroke-dashoffset: var(--length);
+  animation: path var(--duration) forwards;
+  animation-delay: var(--delay);
+}
+@keyframes path{
+  100%{stroke-dashoffset: 0;}
+}
+
 @media (max-width: 480px){
 html{
   font-size: 13px;
@@ -114,5 +139,13 @@ html{
 #underline{
   top: 43.5px;
   height: 5px;
+}
+.svg-box{
+  padding: 0px 25px
+}
+svg{
+  fill: none;
+  width: 300px;
+  stroke-width: 1px;
 }
 }
