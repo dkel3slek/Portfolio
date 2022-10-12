@@ -24,7 +24,7 @@ nav{
   flex-direction: row;
   justify-content: space-around;
   position: fixed;
-  right: 100%;
+  right: 110%;
   width: 100%;
   background-color: rgba(255, 255, 255, 0);
   box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 5px;
@@ -88,7 +88,7 @@ nav span:hover{
 }
 .bg-yellow {
   background-color: #ffffff;
-  color: white;
+  color: black;
 }
 .bg-blue {
   background-color: #b6d8f2;
@@ -108,28 +108,37 @@ nav span:hover{
 }
 
 /* home */
-.svg-box{
+.home-content{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  margin: 0px 100px;
+}
+.home-text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width:100%;
   height: 100%;
-  padding: 0px 150px
 }
 
 svg {
   fill: none;
-  width: 500px;
-  height: 110px;
+  height: 100%;
   stroke-width: 12px;
 }
-
+.svg-01{
+  width: 300px;
+  margin-left: 20px;
+}
 .svg-01 path{
   stroke-dasharray: var(--length01);
   stroke-dashoffset: var(--length01);
 }
 .svg-group-bg-01 > path{
-  stroke: #000;
+  stroke: rgb(246, 194, 194);
   animation: path var(--duration01) ease forwards;
   animation-delay: var(--delay01);
 }
@@ -139,23 +148,108 @@ svg {
   animation-delay: var(--delay01);
 }
 
-.path-02{
+.svg-02{
+  margin-left: 20px;
+  margin-right: 80px;
+  width: 290px
+}
+.svg-02 path{
   stroke: black;
   stroke-dasharray: var(--length02);
   stroke-dashoffset: var(--length02);
   animation: path var(--duration02) forwards;
   animation-delay: var(--delay02);
 }
-/* path{
+
+.svg-03 {
+  width: 300px;
+  margin-left: 20px;
+}
+.svg-03 path{
   stroke: black;
-  stroke-dasharray: 390;
-  stroke-dashoffset: 390;
+  stroke-dasharray: 329.33;
+  stroke-dashoffset: 329.33;
   animation: path 4s forwards;
-  animation-delay: 2s;
-} */
+  animation-delay: 3.9s;
+}
+
+.svg-04 {
+  width: 350px;
+  margin-left: 20px;
+  margin-right: 20px;
+  animation:bounce-in-right 1.8s both;
+  animation-delay: 4.5s;
+}
+.svg-04 path{
+  stroke: black;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 0;
+}
+.my-name{
+  stroke: rgb(67, 129, 235) !important;
+}
+
 @keyframes path{
   100%{stroke-dashoffset: 0;}
 }
+
+ @keyframes bounce-in-right{
+  0%{
+    transform:translateX(600px);
+    animation-timing-function:ease-in;
+    opacity:0
+  }
+  38%{
+      transform:translateX(0);
+      animation-timing-function:ease-out;
+      opacity:1
+    }
+  55%{
+    transform:translateX(68px);
+    animation-timing-function:ease-in
+  }
+  72%{
+    transform:translateX(0);
+    animation-timing-function:ease-out
+  }
+  81%{
+    transform:translateX(32px);
+    animation-timing-function:ease-in
+  }
+  90%{
+    transform:translateX(0);
+    animation-timing-function:ease-out
+  }
+  95%{
+    transform:translateX(8px);
+    animation-timing-function:ease-in
+  }
+  100%{
+    transform:translateX(0);
+    animation-timing-function:ease-out}
+  }
+
+.home-btn-area{
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  align-items: center;
+}
+.home-btn{
+  width: 100px;
+  text-align: center;
+  padding: 5px 10px;
+  background: linear-gradient(to right, #f4b0e1, #8fafe8);
+  margin-left: 25px;
+  cursor: pointer;
+  animation:slide-in-left .8s cubic-bezier(.25,.46,.45,.94) both;
+  animation-delay: 5.8s;
+}
+
+@keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+
 
 @media (max-width: 480px){
 html{
@@ -165,11 +259,34 @@ html{
   top: 43.5px;
   height: 5px;
 }
-.svg-box{
-  padding: 0px 25px
+.home-content{
+  margin: 0px 30px;
+  height: 300px;
 }
-svg{
-  fill: none;
-  width: 300px;
+.home-text{
+  flex-direction: column;
+  align-items:baseline;
+  justify-content: center;
+  height: 100px;
+}
+
+.svg-01{
+  width: 200px;
+  margin: 0;
+}
+.svg-02{
+  width: 190px;
+  margin: 0;
+}
+.svg-03{
+  width: 200px;
+  margin: 0;
+}
+.svg-04 {
+  width: 230px;
+  margin: 0;
+}
+.home-btn{
+  margin-left: 0;
 }
 }

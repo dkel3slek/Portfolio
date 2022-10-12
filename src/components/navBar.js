@@ -45,11 +45,11 @@ const NavBar = (props) => {
     return (
         <nav className={showNav ? 'show-nav' : ''}>
             <div id='underline' style={{left: underlineLeft}} />
-            <span className={scene==='home'?'color-black':''} onClick={(e) => moveScroll(0)}>home</span>
-            <span className={scene==='about'?'color-black':''} onClick={(e) => moveScroll(props.vh * 100)}>about</span>
-            <span className={scene==='skill'?'color-black':''} onClick={(e) => moveScroll(props.vh * 100 * 2)}>skill</span>
-            <span className={scene==='project'?'color-black':''} onClick={(e) => moveScroll(props.vh * 100 * 3)}>project</span>
-            <span className={scene==='contact'?'color-black':''} onClick={(e) => moveScroll(props.vh * 100 * 4)}>contact</span>
+            <span className={scene==='home'?'color-black':''} onClick={() => moveScroll(0)}>home</span>
+            <span className={scene==='about'?'color-black':''} onClick={() => moveScroll(props.vh * 100)}>about</span>
+            <span className={scene==='skill'?'color-black':''} onClick={() => moveScroll(props.vh * 100 * 2)}>skill</span>
+            <span className={scene==='project'?'color-black':''} onClick={() => moveScroll(props.vh * 100 * 3)}>project</span>
+            <span className={scene==='contact'?'color-black':''} onClick={() => moveScroll(props.vh * 100 * 4)}>contact</span>
         </nav>
     )
 }

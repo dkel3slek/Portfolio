@@ -34,7 +34,7 @@ const Pages = () => {
       />
       <div id='container' className={"container"}>
         <div id='home' className="page bg-yellow">
-          <Home/>
+          <Home vh={vh}/>
         </div>
         <div id='about' className="page bg-blue">about</div>
         <div id='skill' className="page bg-pink">skill</div>
