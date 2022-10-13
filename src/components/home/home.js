@@ -17,7 +17,6 @@ const Home = (props) => {
                 <SvgText04/>
             </div>
             <div className='home-btn-area'>
-                <div className='shiny'/>
                 <div className='home-btn' onClick={() => document.getElementById('container').scrollTo(0, props.vh * 100)}>
                     더 보기
                 </div>

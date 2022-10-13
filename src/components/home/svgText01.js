@@ -7,8 +7,8 @@ const SvgText01 = () => {
         bgPaths.forEach((path, index) => {
             const length = path.getTotalLength()
             path.style.setProperty('--length01', length)
-            path.style.setProperty('--delay01', index * 80 + 'ms')
-            path.style.setProperty('--duration01', length * 6 + 'ms')
+            path.style.setProperty('--delay01', index * 60 + 500 + 'ms')
+            path.style.setProperty('--duration01', length * 4 + 'ms')
         })
 
         const mainGroup = document.querySelector('.svg-group-01')
@@ -16,8 +16,8 @@ const SvgText01 = () => {
         mainPaths.forEach((path, index) => {
             const length = path.getTotalLength()
             path.style.setProperty('--length01', length)
-            path.style.setProperty('--delay01', index * 80 + 'ms')
-            path.style.setProperty('--duration01', length * 6 + 'ms')
+            path.style.setProperty('--delay01', index * 60 + 500 + 'ms')
+            path.style.setProperty('--duration01', length * 4 + 'ms')
         })
     })
     return (

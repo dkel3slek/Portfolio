@@ -7,8 +7,8 @@ const SvgText02 = () => {
         mainPaths.forEach((path, index) => {
             const length = path.getTotalLength()
             path.style.setProperty('--length02', length)
-            path.style.setProperty('--delay02', index * 60 + 2000 + 'ms')
-            path.style.setProperty('--duration02', length * 4 + 'ms')
+            path.style.setProperty('--delay02', index * 40 + 1900 + 'ms')
+            path.style.setProperty('--duration02', length * 2 + 'ms')
         })
     })
 

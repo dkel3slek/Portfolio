@@ -1,6 +1,7 @@
 import { React, useState, useEffect} from 'react'
 import NavBar from './navBar'
 import Home from './home/home'
+import AboutMe from './aboutMe/aboutMe'
 
 const Pages = () => {
   const [scroll, setScroll] = useState(0)
@@ -33,13 +34,15 @@ const Pages = () => {
         scroll={scroll}
       />
       <div id='container' className={"container"}>
-        <div id='home' className="page bg-yellow">
+        <div id='home' className="page bg-white">
           <Home vh={vh}/>
         </div>
-        <div id='about' className="page bg-blue">about</div>
+        <div id='about' className="page bg-white">
+          <AboutMe/>
+        </div>
         <div id='skill' className="page bg-pink">skill</div>
         <div id='project' className="page bg-purple">project</div>
-        <div id='contact' className="page bg-orange">contact</div>
+        <div id='contact' className="page bg-contact">contact</div>
       </div>
     </>
   )

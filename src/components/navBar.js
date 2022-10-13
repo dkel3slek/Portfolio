@@ -25,14 +25,14 @@ const NavBar = (props) => {
             setScene('home')
         }else if (props.scroll >= halfVh && props.scroll < height+halfVh){
             setUnderlineLeft('20%')
-            setScene('about')
+            setScene('aboutMe')
         }else if (props.scroll >= height+halfVh && props.scroll < height*2+halfVh){
             setUnderlineLeft('40%')
             setScene('skill')
-        }else if (props.scroll >= height*2+halfVh && props.scroll < height*3+halfVh){
+        }else if (props.scroll >= height*2+halfVh && props.scroll < height*3+halfVh/2){
             setUnderlineLeft('60%')
             setScene('project')
-        }else if (props.scroll >= height*3+halfVh && props.scroll < height*4+halfVh){
+        }else if (props.scroll >= height*3+halfVh/2 && props.scroll < height*4+halfVh){
             setUnderlineLeft('80%')
             setScene('contact')
         }
@@ -46,7 +46,7 @@ const NavBar = (props) => {
         <nav className={showNav ? 'show-nav' : ''}>
             <div id='underline' style={{left: underlineLeft}} />
             <span className={scene==='home'?'color-black':''} onClick={() => moveScroll(0)}>home</span>
-            <span className={scene==='about'?'color-black':''} onClick={() => moveScroll(props.vh * 100)}>about</span>
+            <span className={scene==='aboutMe'?'color-black':''} onClick={() => moveScroll(props.vh * 100)}>about me</span>
             <span className={scene==='skill'?'color-black':''} onClick={() => moveScroll(props.vh * 100 * 2)}>skill</span>
             <span className={scene==='project'?'color-black':''} onClick={() => moveScroll(props.vh * 100 * 3)}>project</span>
             <span className={scene==='contact'?'color-black':''} onClick={() => moveScroll(props.vh * 100 * 4)}>contact</span>
