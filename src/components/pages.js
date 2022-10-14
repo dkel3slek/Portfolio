@@ -6,6 +6,7 @@ import AboutMe from './aboutMe/aboutMe'
 const Pages = () => {
   const [scroll, setScroll] = useState(0)
   const [vh, setVh] = useState(document.documentElement.clientHeight*0.01)
+  const [navBarHeight, setNavBarHeight] = useState(0)
 
   useEffect(() => {
     document.getElementById('container').addEventListener('scroll', handleScroll)
@@ -16,9 +17,13 @@ const Pages = () => {
       document.getElementById('container').addEventListener('resize', resizeEvent)
     }
   })
+  useEffect(()=>{
+    setNavBarHeight(document.getElementById('navBar').offsetHeight)
+  },[navBarHeight])
   
   const resizeEvent = () => {
     setVh(document.documentElement.clientHeight * 0.01)
+    setNavBarHeight(document.getElementById('navBar').offsetHeight)
   }
 
   const handleScroll = () => {
@@ -34,11 +39,15 @@ const Pages = () => {
         scroll={scroll}
       />
       <div id='container' className={"container"}>
-        <div id='home' className="page bg-white">
+        <div id='home' className="page bg-home">
           <Home vh={vh}/>
         </div>
-        <div id='about' className="page bg-white">
-          <AboutMe/>
+        <div id='about' className="page bg-about-me">
+          <AboutMe 
+            vh={vh}
+            scroll={scroll}
+            navBarHeight={navBarHeight}
+          />
         </div>
         <div id='skill' className="page bg-pink">skill</div>
         <div id='project' className="page bg-purple">project</div>

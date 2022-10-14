@@ -43,7 +43,7 @@ const NavBar = (props) => {
     }
 
     return (
-        <nav className={showNav ? 'show-nav' : ''}>
+        <nav id='navBar' className={showNav ? 'show-nav' : ''}>
             <div id='underline' style={{left: underlineLeft}} />
             <span className={scene==='home'?'color-black':''} onClick={() => moveScroll(0)}>home</span>
             <span className={scene==='aboutMe'?'color-black':''} onClick={() => moveScroll(props.vh * 100)}>about me</span>
